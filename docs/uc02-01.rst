@@ -1,0 +1,20 @@
+.. _uc02-01:
+
+UC02-01 Vytvoření validační sady - kontrola obsahu balíčku
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: účastníci
+
+   - Pracovník knihovny
+
+.. admonition:: vstupní podmínky
+
+   - Pracovník knihovny otevřel úvodní stránku
+
+.. admonition:: tok událostí
+
+   1. Systém zobrazí stránku jako v :ref:`uc01-01`
+
+.. admonition:: následné podmínky
+
+   V aplikaci existuje validační sada připravená pro použití bežnými uživateli.

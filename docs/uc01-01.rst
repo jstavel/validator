@@ -1,0 +1,26 @@
+.. _uc01-01:
+
+UC01-01 Validace balíčku dat přes Web api
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*účastníci*:
+
+- uživatel
+
+*vstupní podmínky*:
+
+- Uživatel otevřel web stránku
+
+*tok událostí*:
+
+1. Systém zobrazí úvodní stránku
+
+   - informace o validátoru
+   - linku pro přihlášení
+   - linku pro registraci
+
+   :download:`home page <tests/home-page.png>`
+   
+
+*následné podmínky*:
+

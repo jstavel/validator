@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+title Validace balíčků dat
+skinparam packageStyle rect
+
+actor :Uživatel validace: as user
+actor :Správce systému: as sys
+
+rectangle  {
+	  :user: --> (UC01-01 Validace balíčku dat přes Web api)
+	  :user: --> (UC01-02 Validace balíčku dat přes REST api)
+	  :user: --> (UC01-03 Validace balíčku dat přes ftp api)
+}
+
+:sys: ---> (UC01-10 Aplikace validátoru Differ)
+
+@enduml
+

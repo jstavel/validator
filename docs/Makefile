@@ -14,6 +14,8 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
+PNGS = uc01.png uc02.png
+
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
 
 help:
@@ -41,68 +43,73 @@ help:
 clean:
 	-rm -rf $(BUILDDIR)/*
 
-html:
+html: $(PNGS)
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
-dirhtml:
+dirhtml: $(PNGS)
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
 
-singlehtml:
+singlehtml: $(PNGS)
 	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml."
 
-pickle:
+pickle: $(PNGS)
 	$(SPHINXBUILD) -b pickle $(ALLSPHINXOPTS) $(BUILDDIR)/pickle
 	@echo
 	@echo "Build finished; now you can process the pickle files."
 
-json:
+json: $(PNGS)
 	$(SPHINXBUILD) -b json $(ALLSPHINXOPTS) $(BUILDDIR)/json
 	@echo
 	@echo "Build finished; now you can process the JSON files."
 
-htmlhelp:
+htmlhelp: $(PNGS)
 	$(SPHINXBUILD) -b htmlhelp $(ALLSPHINXOPTS) $(BUILDDIR)/htmlhelp
 	@echo
 	@echo "Build finished; now you can run HTML Help Workshop with the" \
 	      ".hhp project file in $(BUILDDIR)/htmlhelp."
 
-qthelp:
+qthelp: $(PNGS)
 	$(SPHINXBUILD) -b qthelp $(ALLSPHINXOPTS) $(BUILDDIR)/qthelp
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/GeneralValidator.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/E-Deposit.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/GeneralValidator.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/E-Deposit.qhc"
 
-devhelp:
+devhelp: $(PNGS)
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/GeneralValidator"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/GeneralValidator"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/E-Deposit"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/E-Deposit"
 	@echo "# devhelp"
 
-epub:
+epub: $(PNGS)
 	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub
 	@echo
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
 
-latex:
+pdf: $(PNGS)
+	$(SPHINXBUILD) -bpdf $(ALLSPHINXOPTS) . $(BUILDDIR)/pdf
+	@echo
+	@echo "Build finished; the PDF files are in $(BUILDDIR)/pdf."
+
+latex: $(PNGS)
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
 	@echo "Run \`make' in that directory to run these through (pdf)latex" \
 	      "(use \`make latexpdf' here to do that automatically)."
 
-latexpdf:
+latexpdf: $(PNGS)
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
@@ -151,3 +158,115 @@ doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
+
+
+uc01.png: uc01.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+uc02.png: uc02.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+uc03.png: uc03.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+uc04.png: uc04.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+uc05.png: uc05.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+uc06.png: uc06.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+uc07.png: uc07.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+uc08.png: uc08.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+uc15.png: uc15.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+processmodels.png: processmodels.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+pm01.png: pm01.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+pm02.png: pm02.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+pm03.png: pm03.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+pm04.png: pm04.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+pm05.png: pm05.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+pm06.png: pm06.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+pm07.png: pm07.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+dm01.png: dm01.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+dm02.png: dm02.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+dm03.png: dm03.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+architecture.png: architecture.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+uc12.png: uc12.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+uc13.png: uc13.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+uc14.png: uc14.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+wf01.png: wf01.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+wf02.png: wf02.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+wf03.png: wf03.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+wf04.png: wf04.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+dm04.png: dm04.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+middleware/dm00.png: middleware/dm00.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+middleware/dm01.png: middleware/dm01.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+middleware/dm02.png: middleware/dm02.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+middleware/dm03.png: middleware/dm03.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+middleware/dm04.png: middleware/dm04.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+middleware/seq01.png: middleware/seq01.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+middleware/seq02.png: middleware/seq02.plantuml
+	java -jar ~/lib/plantuml.jar $?
+
+middleware/component01.png: middleware/component01.plantuml
+	java -jar ~/lib/plantuml.jar $?

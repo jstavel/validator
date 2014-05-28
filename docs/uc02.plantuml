@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+title Vytváření validačních sad pravidel
+skinparam packageStyle rect
+
+actor :Pracovník knihovny: as knih
+actor :Systém: as sys
+
+rectangle  {
+	   :knih: --> (UC02-01 Vytvoření validační sady - kontrola obsahu balíčku)
+	   :knih: --> (UC02-02 Vytvoření validační sady - kontroly jednotlivých metadatových souborů - podle xml schematu)
+	   :knih: --> (UC02-03 Vytvoření validační sady - kontroly md5 jednotlivých metadatových souborů)
+	   :knih: --> (UC02-04 Vytvoření validační sady - kontroly jednotlivých obrazových souborů)
+}
+
+@enduml

@@ -1,20 +1,25 @@
-.. General Validator documentation master file, created by
-   sphinx-quickstart on Wed May 28 09:38:16 2014.
+.. E-Deposit documentation master file, created by
+   sphinx-quickstart on Thu Jun 13 05:36:01 2013.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to General Validator's documentation!
-=============================================
+.. (project-task run "*shell*" "make html")
+.. (project-task run-show "*shell*" "google-chrome file:///opt/e-deposit/src/edeposit.policy/docs/_build/html/index.html")
 
-Contents:
+Komplexní validátor
+===========================================================================
+.. sectionauthor:: Jan Stavěl <stavel.jan at gmail.com>
+
+`Dokumentace ke stažení v jiných formátech <https://readthedocs.org/projects/validator/downloads/>`_
 
 .. toctree::
    :maxdepth: 2
 
+   requirements
+   usecases
 
-
-Indices and tables
-==================
+Odkazy
+=================
 
 * :ref:`genindex`
 * :ref:`modindex`
